@@ -1,0 +1,16 @@
+﻿@model BuggyBits.ViewModels.LinksViewModel
+@using System.Collections
+
+@{
+    ViewData["Title"] = "Links";
+}
+
+<table>
+    @foreach (DictionaryEntry link in Model.Links)
+    {
+        <tr>
+            <td><a href="@link.Value">@link.Key</a></td>
+        </tr>
+    }
+</table>
+

@@ -1,0 +1,27 @@
+﻿@model BuggyBits.ViewModels.FeaturedProductsViewModel
+@using System.Data
+@{
+    ViewData["Title"] = "Featured Products";
+}
+
+<table width="100%">
+    <tr style="background-color: #9999FF">
+        <th><b>Product Name</b></th>
+        <th><b>Description</b></th>
+        <th><b>Price</b></th>
+    </tr>
+    @{ int index = 0; }
+    @foreach (DataRowView product in Model.FeaturedProducts)
+    {
+        var backgroundColor = (index++ % 2) == 0 ? "#FFFFCC" : "#CCCCFF";
+
+        <tr style="background-color:@backgroundColor">
+            <td><a href="ProductInfo?ProductName=@product["Product Name"]">@product["Product Name"]</a></td>
+            <td>@product["Description"]</td>
+            <td>@product["Price"]</td>
+        </tr>
+    }
+</table>
+<br />
+[<b>start time:</b>@ViewData["StartTime"]]
+[<b>execution time:</b>@ViewData["ExecutionTime"]]

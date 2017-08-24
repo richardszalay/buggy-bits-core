@@ -1,0 +1,11 @@
+﻿@model BuggyBits.ViewModels.ProductInfoViewModel
+
+@{
+    ViewData["Title"] = "Product Info";
+}
+
+<h2>@Model.ProductName</h2>
+<table>
+    <tr><td>Distributor: </td><td>@Model.Distributor</td></tr>
+    <tr><td>Usually ships in: </td><td>@Model.ShippingInfo</td></tr>
+</table>

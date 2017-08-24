@@ -1,0 +1,40 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    @RenderSection("head", required: false)
+    <link href="styles/style2.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <div id="container">
+        <div id="masthead">
+            <div id="logo"><img src="images/ladybug.jpg" width="91" height="125" /></div>
+            <div id="titles">
+                <h1>Buggy Bits</h1>
+                <h3>.NET Debugging Demos</h3>
+            </div>
+        </div>
+        <div id="navigation">
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/FeaturedProducts">Featured Products</a></li>
+                <li><a href="/AllProducts">All Products</a></li>
+                <li><a href="/CreateAccount">New account</a></li>
+                <li><a href="/Reviews">Reviews</a></li>
+                <li><a href="/News">News</a></li>
+                <li><a href="/CompanyInformation">Company Info</a></li>
+                <li><a href="/Links">Links</a></li>
+            </ul>
+        </div>
+        <div id="content">
+            <div>
+                @RenderBody()
+            </div>
+        </div>
+        <div id="footer">
+            This site was created by Tess at <a href="http://blogs.msdn.com/Tess">http://blogs.msdn.com/Tess</a>
+        </div>
+    </div>
+
+</body>
+</html>
